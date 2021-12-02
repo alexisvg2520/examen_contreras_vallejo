@@ -1,10 +1,13 @@
+let mantenimienos = [];
+
+
 function agregar(id,fecha, kilometraje,mantenimiento,nombre_taller,costos,observacion) {
     // Crear un objeto
-    mantenimientos= {
+    manten= {
                 id: id,  fecha, kilometraje,mantenimiento,nombre_taller,costos,observacion
     };
     // Agregar producto a lista
-    matenimientos.push(mantenimientos);
+    matenimientos.push(manten);
     // Crear la tabla
 
     let  html='<table class=" shwadow table">'

@@ -17,10 +17,10 @@
             <?php
                 include("php\conexionBase.php");
             ?>
-
-        <div class="container-fluid" >
-            <a href="tabla.html"  ><button class="btn btn-warning button"  name ="tabla" value="tabla">Instalación</button></a>
-        </div>
+            <h6>Haga click en <b>Siguiente</b> para continuar con la aplicación.</h6><br>
+            <div class="container-fluid" >
+                <a href="tabla.html"  ><button class="btn btn-warning button"  name ="tabla" value="tabla">Siguiente</button></a>
+            </div>
         </section>
         
     </body>

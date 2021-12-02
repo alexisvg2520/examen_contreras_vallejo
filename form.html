@@ -14,51 +14,55 @@
 
         <!-- formulario-->
 
-        
-        <form>
-            <label for="date">Fecha:</label><br>
-            <input type="date" id="date" name="date"  value="2021-12-02" ><br>
-            <label for="taller">Nombre del taller : </label><br>
-            <input type="text" id="n_taller" name="n_taller" >
-            <label for="costos">Costos: </label><br>
-            <input type ="number" id="costos" name="costos"><br>
-            <label for="Kilometraje">Kilometraje: </label><br>
-            <input type ="number" id="kilometraje" name="n_kilometros"><br>
-            
-            <p>Seleccionar Tipo de Mantenimiento: </p>
+        <div class="mb-3">
 
-            <div>
-            <input type="radio" id="m_preventivo" name="preventivo" value="preventivo"
-                    checked>
-            <label for="preventivo">Preventivo</label>
-            </div>
-
-            <div>
-            <input type="radio" id="m_correctivo" name="correctivo" value="correctivo">
-            <label for="correctivo">Correctivo</label>
-            </div>
-
-            <div>
-                <label for="observaciones">Observaciones:</label>
-
-                <textarea id="observaciones" name="observaciones" rows="4" cols="50">
+            <form >
+                <label class="form-label" for="date">Fecha:</label><br>
+                <input type="date" id="date" name="date"  value="2021-12-02" ><br>
+                <label  class="form-label" for="taller">Nombre del taller : </label><br>
+                <input type="text" id="n_taller" name="n_taller" >
+                <label class="form-label" for="costos">Costos: </label><br>
+                <input type ="number" id="costos" name="costos"><br>
+                <label  class="form-label" for="Kilometraje">Kilometraje: </label><br>
+                <input type ="number" id="kilometraje" name="n_kilometros"><br>
                 
-             </textarea>
+                <p>Seleccionar Tipo de Mantenimiento: </p>
+    
+                <div>
+                <input type="radio" id="m_preventivo" name="preventivo" value="preventivo"
+                        checked>
+                <label  class="form-label" for="preventivo">Preventivo</label>
+                </div>
+    
+                <div>
+                <input type="radio" id="m_correctivo" name="correctivo" value="correctivo">
+                <label class="form-label"  for="correctivo">Correctivo</label>
+                </div>
+    
+                <div>
+                    <label class="form-label" for="observaciones">Observaciones:</label><br>
+    
+                    <textarea id="observaciones" name="observaciones" rows="4" cols="50">
+                    
+                 </textarea>
+    
+    
+                </div>
+                <input type="checkbox" id="aceite" name="aceite" value="aceite">
+                <label class="form-label"  for="vehicle1"> Cambio de Aceite</label><br>
+                <input  class="form-label" type="checkbox" id="frenos" name="frenos" value="frenos">
+                <label  class="form-label" for="vehicle2"> Frenos</label><br>
+                <input class="form-label"  type="checkbox" id="llantas" name="llantas" value="llantas">
+                <label class="form-label" for="vehicle3"> Llantas</label>
+    
+                <div>
+                    <input type="submit"  id="enviar" value="Submit">
+                </div>
+    
+            </form>
 
-
-            </div>
-            <input type="checkbox" id="aceite" name="aceite" value="aceite">
-            <label for="vehicle1"> Cambio de Aceite</label><br>
-            <input type="checkbox" id="frenos" name="frenos" value="frenos">
-            <label for="vehicle2"> Frenos</label><br>
-            <input type="checkbox" id="llantas" name="llantas" value="llantas">
-            <label for="vehicle3"> Llantas</label>
-
-            <div>
-                <input type="submit"  id="enviar" value="Submit">
-            </div>
-
-        </form>
+        </div>
+      
   
     
 </body>

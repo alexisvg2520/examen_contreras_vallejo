@@ -13,9 +13,14 @@
     <body class="hold-transition layout-fixed bg-dark p-4 text-center">
         <section class="container-fluid bg-light p-3 mb-3 rounded">
             <img src="assets\img\logo_car.png" class="img-fluid mb-4 p-1">
-            
-
+            <br>
+            <?php
+                include("php\conexionBase.php");
+            ?>
         </section>
+        <div class="container-fluid" >
+                    <a href="instalacion.php"  ><button class="btn btn-warning button"  name ="instalacion" value="instalacion">Instalación</button></a>
+        </div>
         
     </body>
     <script src="assets/js/myscript.js"></script>

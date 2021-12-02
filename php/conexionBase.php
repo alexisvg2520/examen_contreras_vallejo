@@ -1,7 +1,6 @@
 <?php
-    include "..\php\db.inc.php";
+    include ("db.inc.php");
 
-             
     try {
         $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
         // set the PDO error mode to exception
@@ -19,10 +18,12 @@
         )";
         // use exec() because no results are returned
         $conn->exec($sql);
-        echo "Table MyGuests created successfully";
+        echo "Creación de tabla Exitosa";
       } catch(PDOException $e) {
         echo $sql . "<br>" . $e->getMessage();
       }
     
       $conn = null;
+
+      
 ?>

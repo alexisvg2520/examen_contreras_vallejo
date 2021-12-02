@@ -17,10 +17,11 @@
             <?php
                 include("php\conexionBase.php");
             ?>
-        </section>
+
         <div class="container-fluid" >
-                    <a href="instalacion.php"  ><button class="btn btn-warning button"  name ="instalacion" value="instalacion">Instalación</button></a>
+            <a href="tabla.html"  ><button class="btn btn-warning button"  name ="tabla" value="tabla">Instalación</button></a>
         </div>
+        </section>
         
     </body>
     <script src="assets/js/myscript.js"></script>

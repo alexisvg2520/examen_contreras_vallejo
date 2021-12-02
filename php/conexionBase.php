@@ -18,9 +18,9 @@
         )";
         // use exec() because no results are returned
         $conn->exec($sql);
-        echo "Creación de tabla Exitosa";
+        echo "Creación de tabla <b>Exitosa</b>";
       } catch(PDOException $e) {
-        echo $sql . "<br>" . $e->getMessage();
+        echo "Registro <b>existente</b>";
       }
     
       $conn = null;

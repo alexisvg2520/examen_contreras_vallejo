@@ -2,12 +2,12 @@
   include ("db.inc.php");
 
 
-  $date = $_POST['date'];
+  $fecha= $_POST['date'];
   $kilometraje = $_POST['n_kilometros'];
-  $mantenimientos = $_POST['frenos'];
+  $mantenimiento = $_POST['frenos'];
   $nombre_taller = $_POST['n_taller'];
   $costos =$_POST['costos'];
-  $observaciones=$_POST['observaciones'];
+  $observacion=$_POST['observacion'];
 
   try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);

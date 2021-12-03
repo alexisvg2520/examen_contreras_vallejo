@@ -9,12 +9,12 @@
        
       $sql = "CREATE TABLE cv_mantenimiento (
         id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-        Fecha DATE ,
-        Kilometraje   DECIMAL(8,0) NOT NULL,
+        fecha DATE ,
+        kilometraje   DECIMAL(8,0) NOT NULL,
         mantenimiento VARCHAR(50) ,
-        Nombre_taller VARCHAR(50) NOT NULL,                             
-        Costos_Matenimiento DECIMAL(6,2),
-        Oberservacion VARCHAR(80)
+        nombre_taller VARCHAR(50) NOT NULL,                             
+        costos DECIMAL(6,2),
+        oberservacion VARCHAR(80)
         )";
         // use exec() because no results are returned
         $conn->exec($sql);

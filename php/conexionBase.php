@@ -14,7 +14,7 @@
         mantenimiento VARCHAR(50) ,
         nombre_taller VARCHAR(50) NOT NULL,                             
         costos DECIMAL(6,2),
-        oberservacion VARCHAR(80)
+        observaciones VARCHAR(80)
         )";
         // use exec() because no results are returned
         $conn->exec($sql);

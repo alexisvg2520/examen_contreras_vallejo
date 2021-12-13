@@ -13,36 +13,33 @@
     <body class="hold-transition layout-fixed bg-dark p-4 text-center">
         <section class="container-fluid bg-light p-3 mb-3 rounded">
             <img src="assets\img\logo_car.png" class="img-fluid mb-4 p-1">
-            
-            <h2>¡Registro Exitoso!</h2>
-            <hr>
             <?php
                 include("php\insertar.php");
             ?>
-            <h5>Usted se ha registrado a la aplicación de mantenimiento para su auto.</h5><br>
-            <p>Para regresar al Formulario de clic en <b class="warning"> Formulario</b>.<br><br>
-                Oh si ya ha completado el registro puede regresar a la aplicacion  presionando  en el botón
-                de <b class="success"> Aplicación</b>.</p>
+            <hr>
+            <p>Para un nuevo ingreso de Control de Mantenimiento de clic en <b> Formulario</b>.<br><br>
+                Si ya ha completado el registro puede regresar a la aplicacion  presionando  en el botón
+                de <b> Aplicación</b>.</p>
             
                 <div class="container-fluid">
-                    <a href="form.html"><button class="btn btn-warning" onClick="">Formulario</button></a>
-                    <a href="tabla.html"><button class="btn btn-warning" onclick="">Aplicación</button></a>
+                    <a href="form.html"><button class="btn btn-warning">Formulario</button></a>
+                    <a href="tabla.html"><button class="btn btn-warning">Aplicación</button></a>
                 </div>
 
         </section>
-        
     </body>
-    <script src="assets/js/myscript.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
     <section>
         <footer class=" container text-sm-center text-warning">
-            <strong>Copyright &copy; 2021 Contreras Vallejo</a></strong>
+            <strong>Copyright &copy; 2021  Contreras Vallejo</a></strong>
             <br> 
             Todos los derechos reservados.<br>
-            <b>Version</b> 1.0
+            <b>Version</b> 1.1
             </div>
         </footer>
     </section>
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="assets/js/myscript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 </html>

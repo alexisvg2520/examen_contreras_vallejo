@@ -5,63 +5,86 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">    
         <title>Examen_CV | Tabla</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">    
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/jq-3.6.0/dt-1.11.3/datatables.min.css"/>
+        <link rel="stylesheet" href="https://cdn.datatables.net/searchpanes/1.2.0/css/searchPanes.dataTables.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/select/1.3.1/css/select.dataTables.min.css">
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/css/styles.css">    
     </head>
 
-    <body class="hold-transition layout-fixed bg-dark p-4 text-center">
-        <section class="container-fluid bg-light p-3 mb-3 rounded">
-            <img src="assets\img\logo_car.png" class="img-fluid mb-4 p-1">
-            
-            <h2>¡Registros de Mantenimientos!</h2>
-            <hr>
-            <h5>Usted ha ingresado a la nueva aplicación de mantenimiento para su auto.</h5><br>
-            <p>Para continuar con el proceso de registro de clic en <b class="warning"> Formulario</b>.<br><br>
-                Oh si ya ha completado la instalación y registro puedo continuar en el botón
-                 <b class="success"> Refrescar</b>.</p>
-                
-                
-                
-                <table class="table">
-                    <thead>
-                      <tr>
-                        <th scope="col">N°</th>
-                        <th scope="col">Kilometraje</th>
-                        <th scope="col">Mantenimiento</th>
-                        <th scope="col">Nombre Taller</th>
-                        <th scope="col">Costos</th>
-                        <th scope="col">Observaciones</th>
-                      </tr>
-                    </thead>
-                   <div id="datos">
+    <body class="bg-dark p-4">
 
-
-
-                   </div>
-                  </table>
-                <div class="container-fluid" >
-                    <a href="form.html"  ><button class="btn btn-warning button"  name ="formulario" value="instalacion">Formulario</button></a>
-                    <button class="btn btn-warning button"  id = "refrescar" name ="refrescar" onclick="refrescar()" value="aplicacion">Refrescar</button>
-                  
+        <div class="container-fluid px-1 py-5 mx-auto">
+            <div class="row d-flex justify-content-center">
+                <div class="col-xl-7 col-lg-8 col-md-9 col-11">
+                    <div class="text-center">
+                    <img src="assets\img\logo_car.png" class="mx-auto d-block mb-4 p-1">
+                    </div>
+                    <h5 class="text-center text-warning mb-4">API WEB<br>Control de Mantenimiento de tu Auto</h5>
+                    <p class="text-center text-white">Usted ha ingresado a la nueva aplicación de<br>Control de Mantenimiento para su auto</p>
+                    <div class="card p-3 overflow-auto table-responsive-sm">
+                        <h5 class="text-center mb3">Tabla de Control de Mantenimiento</h5>
+                        <div class="table-responsive-sm mb-3">
+                            <table class="table" id="mostrar_tabla">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">Fecha</th>
+                                    <th scope="col">Taller</th>
+                                    <th scope="col">Kilometraje</th>
+                                    <th scope="col">Costo</th>
+                                    <th scope="col">Mantenimiento</th>
+                                    <th scope="col">Observaciones</th>
+                                  </tr>
+                                </thead>
+                               <tbody>
+                               </tbody>
+                            </table>
+                        </div>
+                        <p class="text-center mb-4">Para registrar un nuevo mantenimiento o control de su auto clic en <b> Formulario</b> para llenarlo
+                            a continuación.</p>
+                        <div class="row justify-content-center text-center">
+                            <div class="btn-group justify-content-center">
+                                <div class="col-sm-2 d-flex"> 
+                                    <a href="form.html"><button type="next" name ="siguiente" value="siguiente" class="btn btn-block btn-warning button">Formulario</button></a>
+                                </div>
+                                <div class="col-sm-3 d-flex">
+                                    <button type="next" id ="cargar" name ="cargar" value="cargar" class="btn btn-block btn-warning button">Cargar</button></a>
+                                </div>
+                                <div class="col-sm-2 d-flex">
+                                    <a href="index.html"><button type="return" name ="atras" value="atras" class="btn btn-block btn-outline-warning button">Inicio</button></a>                      
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-        </section>
+            
+            </div>
+        </div>
         
     </body>
-    <script src="assets/js/myscript.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs5/jq-3.6.0/dt-1.11.3/datatables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/searchpanes/1.2.0/js/dataTables.searchPanes.min.js"></script>
+    <script src="https://cdn.datatables.net/select/1.3.1/js/dataTables.select.min.js"></script>
+    <script src=https://code.highcharts.com/highcharts.js></script>
+    <script src="assets\js\myscript.js"></script>
+    
     <section>
         <footer class=" container text-sm-center text-warning">
-            <strong>Copyright &copy; 2021 Contreras Vallejo</a></strong>
+            <strong>Copyright &copy; 2021  Contreras  Vallejo</a></strong>
             <br> 
             Todos los derechos reservados.<br>
-            <b>Version</b> 1.0
+            <b>Version</b> 1.1
             </div>
         </footer>
     </section>
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    
 
 </html>
